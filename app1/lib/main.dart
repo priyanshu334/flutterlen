@@ -1,5 +1,6 @@
 import 'package:app1/home/HomePage.dart';
 import 'package:app1/pages/intro_page.dart';
+import 'package:app1/pages/shop_page.dart';
 import 'package:flutter/material.dart';
 import 'package:app1/themes/light_mode.dart';
 
@@ -12,6 +13,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false, home: IntroPage());
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: IntroPage(),
+      routes: {
+        '/intro_page': (context) => const IntroPage(),
+        "/shop_page": (context) => const ShopPage(),
+      },
+    );
   }
 }
